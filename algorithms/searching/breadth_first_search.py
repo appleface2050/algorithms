@@ -1,3 +1,5 @@
+# coding=utf-8
+
 """
     breadth_first_search.py
 
