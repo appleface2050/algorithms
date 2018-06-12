@@ -1,3 +1,5 @@
+# coding=utf-8
+
 """
     Depth First Search
     ------------------
@@ -13,7 +15,7 @@
 
     Pseudocode: https://en.wikipedia.org/wiki/Depth-first_search
 """
-
+from algorithms.data_structures.digraph import Digraph
 
 def dfs(graph, start, path=[]):
     """
@@ -29,7 +31,40 @@ def dfs(graph, start, path=[]):
     if start not in graph or graph[start] is None or graph[start] == []:
         return None
     path = path + [start]
+    # print path
     for edge in graph[start]:
-        if edge not in path:
+        # print path
+        if path and (edge not in path):
             path = dfs(graph, edge, path)
     return path
+
+if __name__ == '__main__':
+    g = Digraph()
+    g.add_edge(2, 3)
+    g.add_edge(0, 6)
+    g.add_edge(0, 1)
+    g.add_edge(2, 0)
+    g.add_edge(11, 12)
+    g.add_edge(9, 12)
+    g.add_edge(9, 10)
+    g.add_edge(9, 11)
+    g.add_edge(3, 5)
+    g.add_edge(8, 7)
+    g.add_edge(5, 4)
+    g.add_edge(0, 5)
+    g.add_edge(6, 4)
+    g.add_edge(6, 9)
+    g.add_edge(7, 6)
+    print g
+    print dfs(g.get_adj(), 0)
+
+    # graph = {
+    #     'A': ['B', 'C', 'E'],
+    #     'B': ['A', 'D', 'F'],
+    #     'C': ['A', 'G'],
+    #     'D': ['B'],
+    #     'F': ['B'],
+    #     'E': ['A'],
+    #     'G': ['C']
+    # }
+    # print dfs(graph, "A")
