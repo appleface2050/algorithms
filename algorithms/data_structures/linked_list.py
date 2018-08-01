@@ -54,7 +54,8 @@ class LinkedList(object):
         while curr_node is not None:
             if curr_node.data == data:
                 return curr_node
-            curr_node = curr_node.next
+            else:
+                curr_node = curr_node.next
         return None
 
     def delete(self,data):
