@@ -89,7 +89,7 @@ class Digraph():
 
         Worst Case Complexity: O(V+E)
         """
-        digraph_reversed = Digraph()
+        shu = Digraph()
         old_vertices = self.vertices()
 
         for src in old_vertices:

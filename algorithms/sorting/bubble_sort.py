@@ -22,9 +22,16 @@ def sort(seq):
     :param seq: A list of integers
     :rtype: A list of sorted integers
     """
+    count = 0
     L = len(seq)
     for i in range(L):
         for n in range(1, L - i):
             if seq[n] < seq[n - 1]:
+                print seq
                 seq[n - 1], seq[n] = seq[n], seq[n - 1]
+
     return seq
+
+if __name__ == '__main__':
+    print sort([8,22,7,9,31,19,5,13])
+

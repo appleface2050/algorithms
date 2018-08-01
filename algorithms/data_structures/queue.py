@@ -51,3 +51,12 @@ class Queue:
         Worst Case Complexity:  O(1)
         """
         return len(self._queue)
+
+
+if __name__ == '__main__':
+    a = Queue()
+    a.add(1)
+    a.add(2)
+    a.add(3)
+    print a.remove()
+    print a.remove()

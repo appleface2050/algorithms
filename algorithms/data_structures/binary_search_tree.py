@@ -398,7 +398,7 @@ class BinarySearchTree(object):
 if __name__ == '__main__':
     a = BinarySearchTree()
     now = datetime.datetime.now()
-    for i in range(0, 10000000):
+    for i in range(0, 100000):
         # if a.size() == 45137:
         #     a.put(99, "99")
         m = randint(0, 100000000)
