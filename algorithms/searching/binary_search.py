@@ -8,8 +8,6 @@
     Psuedo Code: http://en.wikipedia.org/wiki/Binary_search
 
 """
-
-
 def search(seq, key):
     """
     Takes a list of integers and searches if the `key` is contained within

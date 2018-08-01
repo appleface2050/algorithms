@@ -12,8 +12,6 @@
     Psuedo code: http://en.wikipedia.org/wiki/Bubble_sort
 
 """
-
-
 def sort(seq):
     """
     Takes a list of integers and sorts them in ascending order. This sorted

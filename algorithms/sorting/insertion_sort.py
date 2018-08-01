@@ -12,8 +12,6 @@
     Psuedo Code: CLRS. Introduction to Algorithms. 3rd ed.
 
 """
-
-
 def sort(seq):
     """
     Takes a list of integers and sorts them in ascending order. This sorted
