@@ -8,6 +8,9 @@
     BST.
 
     Pseudo Code: http://algs4.cs.princeton.edu/32bst
+1、先序遍历（先根节点，再左节点，后右节点）
+2、中序遍历（先左节点，再根节点，后右节点）
+3、后序遍历（先左节点，再右节点，后根节点）
 """
 import datetime
 from random import randint
@@ -29,9 +32,16 @@ class BinarySearchTree(object):
     """
     Implementation of a Binary Search Tree.
     """
-
     def __init__(self):
         self.root = None
+
+    def xian_xu(self, root):
+        if root == None:
+            return None
+        print root.val
+        self.xian_xu(root.left)
+        self.xian_xu(root.right)
+
 
     def _size(self, node):
         if node is None:

@@ -56,7 +56,7 @@ if __name__ == '__main__':
     g.add_edge(6, 9)
     g.add_edge(7, 6)
     print g
-    print dfs(g.get_adj(), 0)
+    print dfs(g.get_adj(), 2)
 
     # graph = {
     #     'A': ['B', 'C', 'E'],
