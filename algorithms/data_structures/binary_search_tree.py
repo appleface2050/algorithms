@@ -1,3 +1,5 @@
+# coding=utf-8
+
 """
     Binary Search Tree
     ------------------
@@ -411,12 +413,14 @@ if __name__ == '__main__':
     for i in range(0, 100000):
         # if a.size() == 45137:
         #     a.put(99, "99")
-        m = randint(0, 100000000)
+        m = randint(0, 100000)
         a.put(m, str(datetime.datetime.now()))
     # a.put(99, str(datetime.datetime.now()))
     print "build done:", datetime.datetime.now() - now
-    for j in range(0, 1000):
-        a.get(j)
+    # for j in range(0, 1000):
+    #     a.get(j)
+    for j in range(0, 100000):
+        a.delete(j)
     print "find done",datetime.datetime.now() - now
 
     # result = {}
