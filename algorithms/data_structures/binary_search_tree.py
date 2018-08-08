@@ -13,6 +13,35 @@
 1、先序遍历（先根节点，再左节点，后右节点）
 2、中序遍历（先左节点，再根节点，后右节点）
 3、后序遍历（先左节点，再右节点，后根节点）
+
+#前序（pre-order，NLR）
+def preorder(node):
+    if node is not None:
+        print node.data,
+        preorder(node.left)
+        preorder(node.right)
+#中序（in-order，LNR）
+def inorder(node):
+    if node is not None:
+        inorder(node.left)
+        print node.data,
+        inorder(node.right)
+#后序（post-order，LRN）
+def postorder(node):
+    if node is not None:
+        postorder(node.left)
+        postorder(node.right)
+        print node.data,
+#层序（level-order）
+def levelorder(node, more=None):
+    if node is not None:
+        if more is None:
+            more = []
+        more += [node.left, node.right]
+        print node.data,
+    if more:
+        levelorder(more[0], more[1:])
+
 """
 import datetime
 from random import randint

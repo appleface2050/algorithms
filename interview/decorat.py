@@ -9,14 +9,42 @@ def abc(a):
             print "args", args
             print "kwargs" , kwargs
             # print "dcf"
-
         return wrapper
     return my_dec
 
-@abc(100)
+@abc(1)
 def print_(number):
     print number
 
+def dec2(func):
+    def dec_(number):
+        # print "inner dec"
+        func(number)
+    return dec_
+
+@dec2
+def print2(number):
+    print number
+
+
+def gen():
+    for i in range(10):
+        yield i
+
+
+
+def fib_gen(max):
+    n, a, b = 0, 0, 1
+    while(n < max):
+        yield b
+        a, b = b, a+b
+        n += 1
 
 if __name__ == '__main__':
-    print_(123, 456, a=1, b=2)
+    # print_(123, 456, a=1, b=2)
+    # print2(100)
+    for i in gen():
+        print i
+
+    # for i in fib_gen(20):
+    #     print i
