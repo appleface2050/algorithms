@@ -16,15 +16,20 @@ def abc(a):
 def print_(number):
     print number
 
+
+
+
 def dec2(func):
     def dec_(number):
-        # print "inner dec"
-        func(number)
+        print "inner dec"
+        obj = func(number)
+        return obj
     return dec_
 
 @dec2
 def print2(number):
     print number
+    return number
 
 
 def gen():
@@ -42,9 +47,10 @@ def fib_gen(max):
 
 if __name__ == '__main__':
     # print_(123, 456, a=1, b=2)
-    # print2(100)
-    for i in gen():
-        print i
+    result = print2(100)
+    print result
+    # for i in gen():
+    #     print i
 
     # for i in fib_gen(20):
     #     print i

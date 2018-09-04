@@ -38,10 +38,13 @@ def bin_search_recursively(l, first, last, n):
   if first > last:
     return None
 
-  mid = (first + last) // 2 # Use / 2 if you're using Python 2
+  mid = (first + last) / 2 # Use / 2 if you're using Python 2
   if l[mid] > n:
     return bin_search_recursively(l, first, mid - 1, n)
   elif l[mid] < n:
     return bin_search_recursively(l, mid + 1, last, n)
   else:
-    return mid
+    # return mid
+    return  l[mid]
+if __name__ == '__main__':
+    print bin_search_recursively([1,2,3,4,5,6,7,8,9], 0, 8, 6)
